@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>CSS UNIT | EM & REM</title>
+    <style>
+      html {
+        font-size: 20px;
+      }
+      .container {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+      }
+      .box1 {
+        width: 600px;
+        height: 600px;
+        background-color: violet;
+        font-size: 10px;
+        text-align: center;
+      }
+      .box1 h1 {
+        font-size: 3em;
+        /* sama dengan */
+        /* font-size: 30px; */
+      }
+      .box1 p {
+        font-size: 1em;
+        /* sama dengan */
+        /* font-size: 10px; */
+      }
+
+      .box2 {
+        width: 600px;
+        height: 600px;
+        background-color: rgb(255, 0, 166);
+        font-size: 10px;
+        text-align: center;
+      }
+
+      .box2 h1 {
+        font-size: 3rem;
+        /* sama dengan */
+        /* font-size: 60px; */
+      }
+      .box2 p {
+        font-size: 1rem;
+        /* sama dengan */
+        /* font-size: 20px; */
+      }
+    </style>
+  </head>
+  <body>
+    <!-- PERBEDAAN EM DENGAN REM (CSS UNIT) 
+
+      1. em   => ukurannya akan mengikuti dari parent, seperti kasus disini parentnya yaitu .box
+      
+      2. rem => ukurannya akan mengikuti parentnya,  tetapi parentnya hanya html saja, seperti pada .box2
+    
+    -->
+    <div class="container">
+      <div class="box1">
+        <h1>Hellow World 3EM</h1>
+        <p>Lorem ipsum dolor sit amet. 1EM</p>
+      </div>
+      <div class="box2">
+        <h1>Hellow World 3REM</h1>
+        <p>Lorem ipsum dolor sit amet. 1REM</p>
+      </div>
+    </div>
+  </body>
+</html>

@@ -1,0 +1,77 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    background-color: #eee;
+    line-height: 1.6;
+    font-weight: 300;
+    min-height: 2000px;
+    text-align: center;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+/* PENGGUNAAN EM REM PADA LENGTH (MARGIN & PADDING) */
+
+/* marginnya em */
+
+/* .btn{
+    display: inline-block;
+    background-color: #333;
+    color: #eee;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    padding: 1em 3em;
+    atau sama dengan padding => 16px dan 48px
+    karena ukuran defaultnya 16px
+    JADI UNTUK BUTTON BERIKUTNYA TINGGAL KITA ATUR FONT-SIZENYA SAJA
+
+    margin: 0 1.5em;
+}
+
+.btn-sm{
+    font-size: 0.5em;
+    atau sama dengan padding => 8px dan 16px
+}
+
+.btn-lg{
+    font-size: 2em;
+    atau sama dengan padding => 8px dan 24px
+} */
+
+/* jika margin menggunakan em, maka ukuran marginnya beda setiap button */
+
+
+/* marginnya rem */
+
+.btn{
+    display: inline-block;
+    background-color: #333;
+    color: #eee;
+    font-weight: 700;
+    text-decoration: none;
+    text-transform: uppercase;
+
+    padding: 1em 3em;
+    /* atau sama dengan padding => 16px dan 48px */
+    /* karena ukuran defaultnya 16px */
+    /* JADI UNTUK BUTTON BERIKUTNYA TINGGAL KITA ATUR FONT-SIZENYA SAJA */
+
+    margin: 0 1.5rem;
+}
+
+.btn-sm{
+    font-size: 0.5em;
+    /* atau sama dengan padding => 8px dan 16px */
+}
+
+.btn-lg{
+    font-size: 2em;
+    /* atau sama dengan padding => 8px dan 24px */
+}
+
+/* jika margin menggunakan em, maka ukuran marginnya beda setiap button */

@@ -1,0 +1,168 @@
+body{
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+    color: #333;
+    background-color: #eee;
+    line-height: 1.6;
+    font-weight: 300;
+    min-height: 2000px;
+    text-align: center;
+}
+
+.container{
+    width: 80%;
+    margin: auto;
+}
+
+/* PENGGUNAAN EM & REM PADA TYPOGRAPHY(TULISAN) */
+
+.typography{
+    display: flex;
+}
+
+.typography .col{
+    flex: 1;
+    margin: 0 0.5em;
+    padding: 0 0.5em;
+}
+
+
+/* KASUS 1 => jika tidak ada element parent yang menginisialisasikan font-size  */
+
+/* .col-em h2{
+    font-size: 2em;
+    font-size => 32 px
+} */
+
+/* .col-em p{
+    font-size: 1.5em;
+    font-size => 24px
+} */
+
+/* JIKA TIDAK TERDAPAT PARENT YANG MEMILIKI FONT SIZE MAKA SIZE DEFAULT YANG AKAN DIGUNAKAN, SIZE DEFAULTNYA => 16px */
+
+/* KASUS 2 => jika ada element parent yang menginisialisasikan font-size  */
+
+/* .col-em{
+    font-size: 20px;
+}
+
+.col-em h2{
+    font-size: 2em;
+    font-size => 40 px
+}
+
+.col-em p{
+    font-size: 1.5em;
+    font-size => 30px
+} */
+
+/* KASUS 3 => jika parentnya diatas parent aslinya, seperti pada paren .typography */
+
+/* .typography{
+    font-size: 10px;
+}
+
+.col-em h2{
+    font-size: 2em;
+    font-size => 20 px
+}
+
+.col-em p{
+    font-size: 1.5em;
+    font-size => 25px
+} */
+
+/* MAKA DIA AKAN MENCARI TERUS KEATAS SAMPAI MENEMUKAN VALUE FIX DARI FONT-SIZE, SEPERTI PADA .TYPOGRAPHY YANG SUDAH ADA VALUE FIX FONT-SIZE */
+
+
+/* KASUS 4 => jika parent aslinya menggunakan font-size relatif(em), seperti .col-em */
+
+.typography{
+    font-size: 10px;
+}
+
+.col-em{
+    font-size: 2em;
+}
+
+.col-em h2{
+    font-size: 3em;
+    /* font-size => 60 px */
+}
+
+.col-em p{
+    font-size: 1.5em;
+    /* font-size => 30px */
+}
+
+/* JADI KONSEPNYA AKAN CASCADING(MENUMPUK), 3em * 2em * 10px, dan 1.5em * 2em * 10px */
+
+
+/* kasus 1 => jika root/htmlnya tidak menginisialisasi font-size */
+
+/* .col-rem h2{
+    font-size: 2rem;
+    font sizenya => 32px
+}
+.col-rem p{
+    font-size: 1.5rem;
+    font sizenya => 24px
+} */
+
+/* JADI AKAN MENGGUNAKAN UKURAN FONT-SIZE DEFAULT, YAITU 16 */
+
+/* kasus 2 => jika root/htmlnya menginisialisasi font-size */
+
+/* html{
+    font-size: 10px;
+} */
+
+/* atau bisa juga */
+
+/* :root{
+    font-size: 10px;
+} */
+
+/* .col-rem h2{
+    font-size: 2rem;
+    font sizenya => 20px
+}
+.col-rem p{
+    font-size: 1.5rem;
+    font sizenya => 15px
+} */
+
+/* JADI AKAN MENGGUNAKAN UKURAN FONT-SIZE HTML ATAU :ROOT */
+
+/* kasus 3 => jika root/htmlnya menginisialisasi font-size dan parent aslinya juga menginisialisasi font-size, seperti col-rem */
+
+
+:root{
+    font-size: 10px;
+}
+
+/* parent asli */
+
+.col-rem{
+    font-size: 50px;
+}
+
+.col-rem h2{
+    font-size: 2rem;
+    /* font sizenya => 20px */
+}
+.col-rem p{
+    font-size: 1.5rem;
+    /* font sizenya => 15px */
+}
+
+/* JADI TETAP AKAN MENGGUNAKAN ROOT ATAU HTML(TIDAK TERPENGARUH SEKALIPUN ITU DARI PARENT ASLINYA)*/
+
+/* UNTUK TYPOGRAPHY LEBIH BAIK MENGGUNAKAN REM */
+
+
+
+
+
+
+
